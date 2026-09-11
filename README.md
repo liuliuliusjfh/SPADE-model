@@ -5,7 +5,7 @@ This folder contains a seven-stage machine-learning pipeline for classifying the
 ## Project layout
 
 ```text
-github/
+main/
 ├── code/
 │   ├── 1_split_dataset.py
 │   ├── 2_remove_multicollinearity.py
