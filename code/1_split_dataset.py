@@ -6,9 +6,7 @@ labels_df = pd.read_csv('../data/label.csv')
 df = df.merge(labels_df, left_on='contractAddress', right_on='contractID', how='inner')
 
 target = 'Access Control'
-drop_cols = ['contractAddress', 'contractID', 'quarter', 'part_of_day', 'methodId',
-             'Reentrancy', 'Arithmetic', 'Unchecked Return Values', 'DoS',
-             'Bad Randomness', 'Front Running', 'Time manipulation']
+drop_cols = ['contractAddress', 'contractID', 'quarter', 'part_of_day', 'methodId']
 X = df.drop(columns=drop_cols + [target]).select_dtypes('number').fillna(0)
 y = df[target]
 
